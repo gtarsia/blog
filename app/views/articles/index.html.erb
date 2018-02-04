@@ -3,6 +3,10 @@
 <h1>Hello, Guido!</h1>
 <p>Try to express what you feel/think here.</p>
 
+<%= link_to 'New Article', new_article_path %>
+
+<br>
+
 <table>
   <thead>
     <tr>
@@ -18,14 +22,10 @@
         <td>
           <%= link_to article.title, article %>
         </td>
-        <td><%= article.text[0..50] %></td>
+        <td><%= article.text.truncate(50) %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>
