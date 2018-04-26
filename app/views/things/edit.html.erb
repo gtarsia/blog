@@ -1,0 +1,8 @@
+<h1>Editing Thing</h1>
+
+<%= link_to 'Show', @thing %> |
+<%= link_to 'Back', things_path %>
+
+<%= render 'form', thing: @thing %>
+
+<%= link_to 'Destroy', @thing, method: :delete, data: { confirm: 'Are you sure?' } %>

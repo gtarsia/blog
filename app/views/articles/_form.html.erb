@@ -4,23 +4,27 @@
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
       <ul>
-      <% article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% article.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :article_title, style: 'width: 450px',
+    <%= form.text_field :title, id: :article_title, class: 'title edit',
       autofocus: true %>
   </div>
 
   <div class="field">
     <%= form.label :text %>
-    <%= form.text_area :text, id: :article_text, 
-      style: 'width: 600px; height: 400px;font-family:verdana;font-size:11px' %>
+    <%= form.text_area :text, id: :article_text, class: 'text edit' %>
+    <textarea id="wind" class="wind" style="color: rgba(0, 0, 0, 1)"></textarea>
+    <div class="clear"> </div>
+  </div>
+
+  <div class="field">
   </div>
 
   <div class="actions">

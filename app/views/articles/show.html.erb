@@ -1,14 +1,15 @@
+<% content_for :title, @article.title %>
 <p id="notice"><%= notice %></p>
 
 <%= link_to 'Articles', articles_path %> |
 <%= link_to 'Edit', edit_article_path(@article) %>
 
 <p>
-  <h2 style="width: 700px">
+  <h2 class="title show">
     <%= @article.title %>
   </h2>
 </p>
 
-<div style="width: 500px">
+<div class="text show">
   <%= markdown @article.text %>
 </div>
