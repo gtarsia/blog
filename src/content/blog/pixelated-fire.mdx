@@ -1,0 +1,45 @@
+---
+title: 'A better Pixelated Fire'
+description: 'Making pixelated fire less disorienting'
+pubDate: 'Dec 08 2023'
+heroImage: '/vid/fire/fire.gif'
+---
+
+import Video from '../../components/Video.astro'
+
+I was following [febucci's fire shader](https://www.febucci.com/2019/05/fire-shader/),
+and while looking to pixelate the fire, I noticed a nice pixelation effect.
+
+## How it normally looks
+
+<Video file="/vid/fire/1" ext="mp4" /> 
+
+## Adding pixelation
+
+This line placed before any other effects adds pixelation:
+
+```
+ uv = floor(uv * pixelSize) / pixelSize;
+```
+<Video file="/vid/fire/2" ext="mp4" /> 
+
+This isn't adjusting for aspect ratio (which is why each pixel is wider than taller).
+You would adjust this by doing:
+
+```
+  uv.x = floor(uv.x * pixelSizeX * aspect) / pixelSizeX;
+  uv.y = floor(uv.y * pixelSizeY) / pixelSizeX;
+```
+
+But by accident, I uncommented one of these lines, just leaving out the first one
+
+```
+  uv.x = floor(uv.x * pixelSizeX * aspect) / pixelSizeX;
+```
+
+... resulting in the following fire:
+
+<Video file="/vid/fire/3" ext="mp4" /> 
+
+The pixelation is happening only horizontally.
+Notice how smoother it is yet still retaining the spirit of pixel art.

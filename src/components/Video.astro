@@ -1,0 +1,17 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends Omit<HTMLAttributes<'video'>, 'src' | 'type'> {
+  file: string,
+  ext: string,
+}
+
+const { file, ext = 'mp4', ...props } = Astro.props;
+---
+
+<div class="padded-container">
+  <video autoplay playsinline muted loop width="100%" {...props}>
+      <source src={`${file}.${ext}`} type={`video/${ext}`} />
+      Your browser does not support the video tag.
+  </video>
+</div>
