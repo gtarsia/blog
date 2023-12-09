@@ -5,12 +5,12 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2 style="flex-grow: 1; flex-basis: 0;"><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
-		<div class="social-links">
+		<div class="social-links" style="flex-grow: 1; flex-basis: 0; justify-content: end;">
 			<a href="https://twitter.com/guiditaraza" target="_blank">
 				<span class="sr-only">Follow me on Twitter</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
