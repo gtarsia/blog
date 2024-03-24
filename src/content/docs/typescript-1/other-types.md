@@ -1,5 +1,9 @@
 ---
 title: Other types
+sidebar:
+  badge:
+    text: WIP
+    variant: danger
 ---
 
 - `null`

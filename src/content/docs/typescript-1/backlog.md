@@ -1,5 +1,9 @@
 ---
 title: Backlog
+sidebar:
+  badge:
+    text: WIP
+    variant: danger
 ---
 
 # TypeScript code is discarded

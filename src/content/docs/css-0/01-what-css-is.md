@@ -1,8 +1,5 @@
 ---
 title: What CSS is
-sidebar:
-  attrs:
-    style: "font-style: italic"
 ---
 
 CSS stands for **C**ascading **S**tyle **S**heets (we don't care what that means).

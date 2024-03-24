@@ -1,5 +1,5 @@
 ---
-title: What prettier is
+title: More selectors
 sidebar:
   badge:
     text: WIP
