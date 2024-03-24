@@ -53,6 +53,7 @@ export default defineConfig({
   site: "https://blog-eyc.pages.dev",
   integrations: [
     starlight({
+      head: [{ tag: "script", attrs: { src: "/scroll.js", defer: true } }],
       title: "NextJS - Zero to Hero",
       // sidebar: [
       //   {
