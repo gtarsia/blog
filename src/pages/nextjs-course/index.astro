@@ -1,0 +1,17 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import NextJsIntro from '../../components/NextJsIntro.md'
+import { getCollection } from 'astro:content';
+// import FormattedDate from '../components/FormattedDate.astro';
+
+const docs = (await getCollection('docs')).reverse();
+// layout: ../../layouts/BaseLayout.astro
+// title: NextJS Course
+// description: NextJS Course
+console.log(docs)
+---
+
+<StarlightPage frontmatter={{ title: 'Introduction' }}>
+  <NextJsIntro />
+</StarlightPage>
+

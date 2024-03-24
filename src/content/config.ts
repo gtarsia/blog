@@ -1,3 +1,4 @@
+import { docsSchema } from "@astrojs/starlight/schema";
 import { defineCollection, z } from "astro:content";
 
 const blog = defineCollection({
@@ -9,8 +10,10 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     heroImage: z.string().optional(),
-    published: z.boolean().default(true),
+    published: z.boolean().optional(),
   }),
 });
 
-export const collections = { blog };
+const docs = defineCollection({ schema: docsSchema() });
+
+export const collections = { blog, docs };

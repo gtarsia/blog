@@ -1,0 +1,62 @@
+diff --git a/node_modules/@astrojs/starlight/.prettierignore b/node_modules/@astrojs/starlight/.prettierignore
+new file mode 100644
+index 0000000..72e8ffc
+--- /dev/null
++++ b/node_modules/@astrojs/starlight/.prettierignore
+@@ -0,0 +1 @@
++*
+diff --git a/node_modules/@astrojs/starlight/components/SidebarSublist.astro b/node_modules/@astrojs/starlight/components/SidebarSublist.astro
+index 399d191..a0bab3f 100644
+--- a/node_modules/@astrojs/starlight/components/SidebarSublist.astro
++++ b/node_modules/@astrojs/starlight/components/SidebarSublist.astro
+@@ -2,6 +2,8 @@
+ import { flattenSidebar, type SidebarEntry } from '../utils/navigation';
+ import Icon from '../user-components/Icon.astro';
+ import Badge from './Badge.astro';
++import { Icons } from '@astrojs/starlight/components/Icons';
++import IcBaselineHttp from '~icons/ic/baseline-http'
+ 
+ interface Props {
+ 	sublist: SidebarEntry[];
+@@ -39,6 +41,9 @@ const { sublist, nested } = Astro.props;
+ 					>
+ 						<summary>
+ 							<div class="group-label">
++                {entry.icon && entry.icon === 'http'
++                  ? <IcBaselineHttp style={{fontSize: '1.2rem'}} />
++                  : <Icon name={'seti:' + entry.icon as keyof typeof Icons} size=".8rem" />}
+ 								<span class="large">{entry.label}</span>
+ 								{entry.badge && (
+ 									<>
+diff --git a/node_modules/@astrojs/starlight/schemas/sidebar.ts b/node_modules/@astrojs/starlight/schemas/sidebar.ts
+index 86eb7f8..53425e0 100644
+--- a/node_modules/@astrojs/starlight/schemas/sidebar.ts
++++ b/node_modules/@astrojs/starlight/schemas/sidebar.ts
+@@ -50,6 +50,7 @@ const AutoSidebarGroupSchema = SidebarGroupSchema.extend({
+ 		/** How many directories deep to include from this directory in the sidebar. Default: `Infinity`. */
+ 		// depth: z.number().optional(),
+ 	}),
++  icon: z.string().optional(),
+ });
+ export type AutoSidebarGroup = z.infer<typeof AutoSidebarGroupSchema>;
+ 
+diff --git a/node_modules/@astrojs/starlight/utils/navigation.ts b/node_modules/@astrojs/starlight/utils/navigation.ts
+index 7be5253..9c41ff1 100644
+--- a/node_modules/@astrojs/starlight/utils/navigation.ts
++++ b/node_modules/@astrojs/starlight/utils/navigation.ts
+@@ -32,6 +32,7 @@ interface Group {
+ 	entries: (Link | Group)[];
+ 	collapsed: boolean;
+ 	badge: Badge | undefined;
++  icon?: string;
+ }
+ 
+ export type SidebarEntry = Link | Group;
+@@ -107,6 +108,7 @@ function groupFromAutogenerateConfig(
+ 		entries: sidebarFromDir(tree, currentPathname, locale, subgroupCollapsed ?? item.collapsed),
+ 		collapsed: item.collapsed,
+ 		badge: item.badge,
++    icon: item.icon,
+ 	};
+ }
+ 
