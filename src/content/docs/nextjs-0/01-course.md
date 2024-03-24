@@ -1,5 +1,5 @@
 ---
-title: NextJS
+title: What NextJS is
 ---
 
 NextJS is the premier full stack web framework. It uses ReactJS for the client side rendering, while adding things to the client side, but also adds a server side counterpart <mark style="background: #FFB8EBA6;">Improve the verbiage here</mark>

@@ -1,5 +1,5 @@
 ---
-title: ESLint
+title: What is ESLint is
 ---
 
 ESLint Course is a JS/TS [[linter]].

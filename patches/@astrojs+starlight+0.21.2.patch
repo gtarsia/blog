@@ -6,24 +6,45 @@ index 0000000..72e8ffc
 @@ -0,0 +1 @@
 +*
 diff --git a/node_modules/@astrojs/starlight/components/SidebarSublist.astro b/node_modules/@astrojs/starlight/components/SidebarSublist.astro
-index 399d191..a0bab3f 100644
+index 399d191..b37ecdb 100644
 --- a/node_modules/@astrojs/starlight/components/SidebarSublist.astro
 +++ b/node_modules/@astrojs/starlight/components/SidebarSublist.astro
-@@ -2,6 +2,8 @@
+@@ -2,6 +2,15 @@
  import { flattenSidebar, type SidebarEntry } from '../utils/navigation';
  import Icon from '../user-components/Icon.astro';
  import Badge from './Badge.astro';
 +import { Icons } from '@astrojs/starlight/components/Icons';
-+import IcBaselineHttp from '~icons/ic/baseline-http'
++import VscodeIconsFileTypeJsOfficial from '~icons/vscode-icons/file-type-js-official'
++import VscodeIconsFileTypeCss from '~icons/vscode-icons/file-type-css'
++import VscodeIconsFileTypeHtml from '~icons/vscode-icons/file-type-html'
++import LogosTypescriptIcon from '~icons/logos/typescript-icon'
++import CarbonHttp from '~icons/carbon/http'
++import VscodeIconsFileTypeLightPrettier from '~icons/vscode-icons/file-type-light-prettier'
++import LogosNextjsIcon from '~icons/logos/nextjs-icon'
++import VscodeIconsFileTypeEslint from '~icons/vscode-icons/file-type-eslint'
  
  interface Props {
  	sublist: SidebarEntry[];
-@@ -39,6 +41,9 @@ const { sublist, nested } = Astro.props;
+@@ -39,6 +48,23 @@ const { sublist, nested } = Astro.props;
  					>
  						<summary>
  							<div class="group-label">
 +                {entry.icon && entry.icon === 'http'
-+                  ? <IcBaselineHttp style={{fontSize: '1.2rem'}} />
++                  ? <CarbonHttp style={{fontSize: '1.2rem'}} />
++                  : entry.icon === 'javascript'
++                  ? <VscodeIconsFileTypeJsOfficial />
++                  : entry.icon === 'typescript'
++                  ? <LogosTypescriptIcon />
++                  : entry.icon === 'css'
++                  ? <VscodeIconsFileTypeCss />
++                  : entry.icon === 'html'
++                  ? <VscodeIconsFileTypeHtml />
++                  : entry.icon === 'prettier'
++                  ? <VscodeIconsFileTypeLightPrettier />
++                  : entry.icon === 'nextjs'
++                  ? <LogosNextjsIcon  style={{fontSize: '1.0rem'}} />
++                  : entry.icon === 'eslint'
++                  ? <VscodeIconsFileTypeEslint />
 +                  : <Icon name={'seti:' + entry.icon as keyof typeof Icons} size=".8rem" />}
  								<span class="large">{entry.label}</span>
  								{entry.badge && (
