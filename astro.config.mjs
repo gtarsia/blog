@@ -47,6 +47,15 @@ const html1 = autoStarlight("HTML", "1");
 
 const js0 = autoStarlight("JavaScript", "0");
 const js1 = autoStarlight("JavaScript", "1");
+const js2 = autoStarlight("JavaScript", "2");
+const js3 = autoStarlight("JavaScript", "3");
+
+const ts0 = autoStarlight("TypeScript", "0");
+const ts1 = autoStarlight("TypeScript", "1");
+
+const eslint = autoStarlight("ESLint", "0");
+const prettier = autoStarlight("Prettier", "0");
+const nextjs = autoStarlight("NextJS", "0");
 
 // https://astro.build/config
 export default defineConfig({
@@ -61,7 +70,24 @@ export default defineConfig({
       //     link: "intro/01-intro.md",
       //   },
       // ],
-      sidebar: [intro, http0, html0, css0, js0, html1, css1, js1, css2],
+      sidebar: [
+        intro,
+        http0,
+        html0,
+        css0,
+        js0,
+        ts0,
+        html1,
+        css1,
+        js1,
+        ts1,
+        css2,
+        js2,
+        js3,
+        eslint,
+        prettier,
+        nextjs,
+      ],
     }),
     sitemap(),
   ],
