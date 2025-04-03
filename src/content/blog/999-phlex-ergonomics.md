@@ -24,8 +24,9 @@ div do
 end
 ```
 
-While it is an upgrade, it is limited in that it only works within Phlex components
-Let's write some nice helpers to make this syntax nicer.
+While it is an upgrade, it is limited in that it only works within Phlex components,
+and I'd prefer if it looked like using helpers. Let's improve this.
+
 
 ### Using shebang helpers
 
@@ -38,7 +39,16 @@ class PhlexHelper < Phlex::HTML
 end
 ```
 
-This is great because it works in ERB as well
+```ruby
+# app/components/base.rb
+class Components::Base < Phlex::HTML
+  ...
+  include PhlexHelper
+  ...
+end
+```
+
+This is great because it works in ERB as well.
 
 The shebang is also great because it avoid collisions with native HTML elements.  
 I saw some people using prefixes instead (like `x_card`) but I don't like that.
@@ -62,12 +72,11 @@ end
 
 ### Keep Phlex code in `views/components`
 
-I prefer to keep html/view *code* within views/
+I prefer to keep all html content within `app/views`
 I don't like having to switch between `app/views` and `app/components`
 
-So, I do the following in `config/initializers/phlex.rb`:
-
 ```ruby
+# config/initializers/phlex.rb
 module Components
   extend Phlex::Kit
 end

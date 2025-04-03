@@ -54,9 +54,18 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 0.5rem 0;
+  margin: 1.5em 0 0.5rem 0;
   color: rgb(var(--black));
   line-height: 1.2;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
 }
 h1 {
   font-size: 3.052em;
@@ -84,10 +93,10 @@ a:hover {
   color: var(--accent);
 }
 p {
-  margin-bottom: 1em;
+  margin: 0 0 1em 0;
 }
 .prose p {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 textarea {
   width: 100%;
@@ -105,16 +114,21 @@ img {
   border-radius: 8px;
 }
 code {
-  padding: 2px 5px;
-  background-color: rgb(var(--gray-light));
-  border-radius: 2px;
+  padding: 2px 5px !important;
+  background-color: #1a1a1a !important;
+  border-radius: 2px !important;
+  color: #ffffff !important;
+  margin-bottom: 2em !important;
 }
-pre {
-  padding: 1.5em;
-  border-radius: 8px;
+pre, pre[class*="astro-code"], pre[class*="language-"] {
+  padding: 1.5em !important;
+  border-radius: 8px !important;
+  background-color: #1a1a1a !important;
+  margin-bottom: 1.5em !important;
 }
-pre > code {
-  all: unset;
+pre > code, [class*="astro-code"] > code, [class*="language-"] > code {
+  all: unset !important;
+  color: #ffffff !important;
 }
 blockquote {
   border-left: 4px solid var(--accent);
