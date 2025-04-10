@@ -1,0 +1,29 @@
+class Views::Home::Index < Views::Base
+  def title = "gtarsia.dev"
+
+  def view_template
+    article {
+      div(style: "text-align: center;") {
+        h1 { "Welcome to gtarsia.dev!" }
+        p {
+          i { "This is my webpage!" }
+          br
+          i { "This is my site!" }
+          br
+          i { "This is for working!" }
+          br
+          i { "This is for fun!" }
+        }
+        p { "Hi, I'm Guido." }
+        p { "I'm married and father of 2 girls." }
+        p { "I'm argentinian, but living in Bra(s/z)il." }
+        p { "I'm a web developer." }
+        p { "I started in 2012." }
+        p { "I like working on Ruby/Rails applications." }
+        p { "And I really like using Phlex/Stimulus." }
+        p { "Most of my career I've been a JavaScript developer." }
+        p { "Now, I like to think of myself as a recovering JS developer." }
+      }
+    }
+  end
+end
