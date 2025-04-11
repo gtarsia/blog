@@ -25,16 +25,20 @@ class Components::Layouts::Main < Components::Base
         javascript_importmap_tags
       end
       body do
-        nav do
-          ul do
-            li { a(href: "/") { "Home" } }
-            li { a(href: "/projects") { "Projects" } }
-            li { a(href: "/posts") { "Blog" } }
-            li { a(href: "/about") { "About" } }
-            li { a(href: "/uses") { "Uses" } }
+        header do
+          nav do
+            ul do
+              li { a(href: "/") { "Home" } }
+              li { a(href: "/projects") { "Projects" } }
+              li { a(href: "/posts") { "Blog" } }
+              li { a(href: "/about") { "About" } }
+              li { a(href: "/uses") { "Uses" } }
+            end
           end
         end
-        plain yield
+        main do
+          plain yield
+        end
       end
     end
   end
