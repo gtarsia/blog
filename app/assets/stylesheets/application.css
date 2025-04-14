@@ -10,3 +10,7 @@
  */
 
 @import "https://unpkg.com/open-props";
+
+.flex {
+  display: flex;
+}
