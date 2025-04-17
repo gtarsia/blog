@@ -27,7 +27,7 @@ class Views::Rain::Index < Views::Base
     }
 
     .on {
-      animation: block 1s infinite linear;
+      animation: block 1s 1 linear forwards;
     }
     @keyframes block {
       0% {
@@ -40,7 +40,7 @@ class Views::Rain::Index < Views::Base
         color: green;
       }
       100% {
-        color: black;
+        color: red;
       }
     }
       CSS
