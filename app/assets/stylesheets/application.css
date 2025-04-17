@@ -13,4 +13,13 @@
 
 .flex {
   display: flex;
+  background: url("images/demo.png");
+}
+
+@font-face {
+  font-family: "MyAwesomeFont";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("matrix.ttf") format("truetype");
 }

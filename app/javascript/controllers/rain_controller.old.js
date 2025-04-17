@@ -20,12 +20,6 @@ export default class extends Controller {
     const strand = new Strand(this.element, this.randomColumn())
     strand.start()
   }
-
-  // Returns random number between 0 and columns
-  randomColumn() {
-    console.log(this)
-    return Math.floor(Math.random() * this.columnsValue)
-  }
 }
 
 class Strand {
@@ -40,32 +34,43 @@ class Strand {
     this.queueNext()
   }
 
-  get char() {
+  get block() {
     const el = this.element.children[this.row]?.children[this.column]
     if (el == null) { return null }
-    return new Char(el)
+    return new Block(el)
   }
 
-  queueNext() {
-    if (this.char) {
-      this.char.off()
-    }
-    this.row += 1
-    if (this.char) {
-      this.char.on()
-      setTimeout(() => {
-        this.queueNext()
-      }, this.DELAY)
-    }
+  // queueNext() {
+  //   if (this.block) {
+  //     // this.block.off()
+  //   }
+  //   this.row += 1
+  //   if (this.block) {
+  //     this.block.on()
+  //     setTimeout(() => {
+  //       this.queueNext()
+  //     }, this.DELAY)
+  //   }
+  // }
+
+  #randomColumn() {
+    return Math.floor(Math.random() * this.columnsValue)
   }
 }
 
-class Char {
-  CLS = "blink"
+class Block {
   constructor(element) {
     this.element = element
   }
   get classList() { return this.element.classList }
-  on() { this.classList.add(this.CLS) }
-  off() { this.classList.remove(this.CLS) }
+  // Turns on blink class and sets a random character from a-z
+  on() {
+    this.classList.add("on")
+    this.element.textContent = this.randomChar()
+  }
+  off() { this.classList.remove("on") }
+
+  randomChar() {
+    return String.fromCharCode(97 + Math.floor(Math.random() * 26))
+  }
 }
