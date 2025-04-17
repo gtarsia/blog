@@ -26,16 +26,29 @@ body {
 /* Heading styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
-  line-height: var(--font-lineheight-1);
   color: var(--gray-9);
-  border-bottom: 3px solid var(--cyan-6);
-  padding-bottom: var(--size-2);
-  margin-bottom: var(--size-4);
+  text-decoration: underline var(--gray-7) dashed;
 }
 
-h1 { font-size: var(--font-size-7); }
+h1 {
+  font-size: var(--font-size-8);
+  margin: var(--size-7) 0;
+}
 h2 { font-size: var(--font-size-6); }
 h3 { font-size: var(--font-size-5); }
+
+/* Text styles */
+p {
+  font-size: var(--font-size-4);
+  line-height: var(--font-lineheight-3);
+  margin-block: var(--size-3);
+  margin: 0 auto;
+  max-width: var(--size-md);
+}
+
+main {
+  padding-top: var(--size-7);
+}
 
 /* Navbar */
 .navbar {
@@ -50,6 +63,7 @@ h3 { font-size: var(--font-size-5); }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: var(--size-3);
 }
 
 .navbar-brand {

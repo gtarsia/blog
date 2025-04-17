@@ -27,7 +27,9 @@ class Components::Layouts::Main < Components::Base
       body do
         render Components::Navbar.new(brand: @title)
         main do
-          plain yield
+          div(class: "container") do
+            plain yield
+          end
         end
       end
     end
