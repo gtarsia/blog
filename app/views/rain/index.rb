@@ -1,49 +1,70 @@
 class Views::Rain::Index < Views::Base
   def title = "gtarsia.dev"
 
-  def columns = 125
-  def rows = 35
+  def columns = 75
+  def rows = 25
 
   def view_template
     div(id: "rain", data: { controller: "rain", "rain-rows-value": rows, "rain-columns-value": columns }) do
       rows.times do |column|
-        div(class: "flex") do
+        div do
           columns.times do |row|
-            span { "a" }
+            span { letter }
           end
           nil
         end
       end
     end
-    # Load matrix.tff font
+    style!
+  end
+
+  def style!
     style {
       <<~CSS
     #rain {
-      background-color: black;
-      color: black;
       user-select: none;
       cursor: wait;
       font-family: MyAwesomeFont;
+      text-align: center;
+      color: #{bg_green};
+      background-color: #{bg_green};
+      margin: 0rem 10rem;
+      filter: blur(.2px);
+      font-size: 1.25rem;
     }
-
-    .on {
-      animation: block 1s 1 linear forwards;
+    .trigger {
+      animation: block 4s 1 linear forwards;
     }
     @keyframes block {
       0% {
-        color: black;
+        color: #{bg_green};
       }
-      10% {
+      1%, 5% {
         color: white;
+        text-shadow: 2px 2px 6px white;
       }
-      50% {
+      5%, 80% {
         color: green;
+        text-shadow: 2px 2px 6px #{bg_green};
       }
-      100% {
-        color: red;
+      80% {
+        color: #{bg_green};
+        text-shadow: black;
       }
     }
       CSS
     }
+  end
+
+  def bg_green
+    "#000f00"
+  end
+
+  def letter
+    letters.sample
+  end
+
+  def letters
+    @letters ||= ("a".."z").to_a
   end
 end

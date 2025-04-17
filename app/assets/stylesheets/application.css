@@ -13,7 +13,6 @@
 
 .flex {
   display: flex;
-  background: url("images/demo.png");
 }
 
 @font-face {

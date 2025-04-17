@@ -127,9 +127,9 @@ class Block {
   // Turns on blink class and sets a random character from a-z
   on() {
     if (!this.element) return
-    this.element.classList.remove("on")
+    this.element.classList.remove("trigger")
     this.element.offsetWidth // force reflow to retrigger animation
-    this.element.classList.add("on")
+    this.element.classList.add("trigger")
     this.element.textContent = this.randomChar()
   }
   off() {
