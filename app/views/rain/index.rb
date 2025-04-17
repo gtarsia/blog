@@ -24,7 +24,7 @@ class Views::Rain::Index < Views::Base
     #rain {
       user-select: none;
       cursor: wait;
-      font-family: MyAwesomeFont;
+      font-family: MatrixFont;
       text-align: center;
       color: #{bg_green};
       background-color: #{bg_green};
