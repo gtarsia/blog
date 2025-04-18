@@ -15,7 +15,8 @@
 html {
   font-family: var(--font-sans);
   color: var(--gray-9);
-  background: var(--gray-2);
+  /*background: var(--sand-1);*/
+  animation: gradient 1s linear infinite;
 }
 
 body {
@@ -27,12 +28,29 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   color: var(--gray-9);
-  text-decoration: underline var(--gray-7) dashed;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+h1 {
+  background: linear-gradient(90deg, blue 70%, white 70%);
+  background-repeat: repeat-x;
+  background-size: 18px 16px;
+  animation: border-dance 1s infinite linear;
+  margin-bottom: 2rem;
+}
+
+@keyframes border-dance {
+  0% {
+    background-position: 0px 60px;
+  }
+  100% {
+    background-position: 36px 60px;
+  }
 }
 
 h1 {
   font-size: var(--font-size-8);
-  margin: var(--size-7) 0;
 }
 h2 { font-size: var(--font-size-6); }
 h3 { font-size: var(--font-size-5); }
@@ -47,7 +65,8 @@ p {
 }
 
 main {
-  padding-top: var(--size-7);
+  padding-top: var(--size-lg);
+  margin: 0 auto;
 }
 
 /* Navbar */
@@ -56,7 +75,7 @@ main {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--gray-2);
+  background: var(--sand-2);
 }
 
 .navbar-content {
