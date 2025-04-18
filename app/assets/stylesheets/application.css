@@ -33,11 +33,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  background: linear-gradient(90deg, blue 70%, white 70%);
+  background: linear-gradient(90deg, blue 50%, transparent 50%);
   background-repeat: repeat-x;
-  background-size: 18px 16px;
+  background-size: 18px 20px;
   animation: border-dance 1s infinite linear;
-  margin-bottom: 2rem;
+  margin-bottom: var(--size-8);
 }
 
 @keyframes border-dance {
@@ -49,9 +49,7 @@ h1 {
   }
 }
 
-h1 {
-  font-size: var(--font-size-8);
-}
+h1 { font-size: var(--font-size-8); }
 h2 { font-size: var(--font-size-6); }
 h3 { font-size: var(--font-size-5); }
 
@@ -65,17 +63,27 @@ p {
 }
 
 main {
-  padding-top: var(--size-lg);
+  padding-top: var(--size-8);
   margin: 0 auto;
 }
 
 /* Navbar */
 .navbar {
-  padding: var(--size-3);
+  padding-block: var(--size-3);
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--sand-2);
+  background: transparent;
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--cyan-0), var(--blue-0));
+  opacity: 0.95;
+  backdrop-filter: blur(8px);
+  z-index: -1;
 }
 
 .navbar-content {
@@ -90,11 +98,16 @@ main {
 .navbar-brand {
   font-size: var(--font-size-4);
   font-weight: var(--font-weight-7);
-  color: var(--gray-9);
+  color: var(--blue-7);
   text-decoration: none;
   letter-spacing: var(--font-letterspacing-2);
   position: relative;
   padding: var(--size-2);
+  transition: color 0.3s var(--ease-3);
+}
+
+.navbar-brand:hover {
+  color: var(--blue-8);
 }
 
 .navbar-brand::after {
@@ -104,7 +117,7 @@ main {
   height: 2px;
   bottom: 0;
   left: 0;
-  background: var(--cyan-6);
+  background: var(--blue-5);
   transform: scaleX(0);
   transition: transform 0.3s var(--ease-spring-3);
 }
@@ -119,12 +132,12 @@ main {
 }
 
 .navbar-links a {
-  color: var(--gray-7);
+  color: var(--blue-7);
   text-decoration: none;
   font-weight: var(--font-weight-5);
   padding: var(--size-2);
   position: relative;
-  transition: color 0.2s var(--ease-3);
+  transition: all 0.2s var(--ease-3);
 }
 
 .navbar-links a::before {
@@ -132,7 +145,7 @@ main {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: var(--gray-3);
+  background: var(--blue-2);
   border-radius: var(--radius-2);
   z-index: -1;
   scale: 0.7 0.9;
@@ -141,7 +154,8 @@ main {
 }
 
 .navbar-links a:hover {
-  color: var(--gray-9);
+  color: var(--blue-9);
+  transform: translateY(-1px);
 }
 
 .navbar-links a:hover::before {
