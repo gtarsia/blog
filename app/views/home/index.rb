@@ -12,6 +12,13 @@ class Views::Home::Index < Views::Base
           plain "."
         }
         p {
+          plain "I like cramming as many CSS effects as I can into this site."
+          br
+          plain "As you can see."
+          br
+          plain "It's fun!"
+        }
+        p {
           plain "I wrote this site in Rails, Phlex, Stimulus and open-props, and it's hosted at Hetzner."
           br
           a(href: "site-tack") { "Click here" }
@@ -23,11 +30,6 @@ class Views::Home::Index < Views::Base
           plain "Yes, I'm old."
           br
           plain "I even used jQuery."
-        }
-        p {
-          plain "I like cramming as many CSS effects as I can into this site."
-          br
-          plain "It's fun!"
         }
         p {
           plain "Here's my socials:"

@@ -17,6 +17,7 @@
 @import "https://unpkg.com/open-props/theme.dark.switch.min.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Grenze+Gotisch:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=family=Space+Grotesk:wght@300..700&display=swap');
 
 /* Base styles */
 html {
@@ -27,12 +28,12 @@ html {
 
 p {
   font-family: "Space Grotesk";
-  word-spacing: 3px;
-  letter-spacing: .0em;
-  font-size: var(--font-size-fluid-1);
   margin-bottom: var(--size-7);
-  line-height: var(--font-lineheight-2);
+  font-size: var(--font-size-fluid-1);
+  line-height: var(--font-lineheight-1);
   font-weight: var(--font-weight-3);
+  word-spacing: 4px;
+  letter-spacing: .0em;
 
   /*font-family: Syne;*/
   /*word-spacing: 3px;*/
@@ -44,11 +45,11 @@ p {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Cormorant Garamond";
+  font-family: "Grenze Gotisch";
   max-inline-size: initial;
   font-size: var(--font-size-fluid-3);
   margin-bottom: var(--size-8);
-  font-weight: var(--font-weight-3);
+  font-weight: var(--font-weight-5);
 }
 
 a {
