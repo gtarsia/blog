@@ -5,16 +5,36 @@ class Views::Home::Index < Views::Base
     article {
       div {
         h1(class: "animated-underline") { "Welcome to gtarsia.dev!" }
-        p { "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie dolor id dui suscipit, at suscipit enim sodales. In vel est imperdiet, finibus elit in, pharetra tortor. Fusce mollis sapien vitae nisl sollicitudin, ac varius leo pulvinar. Duis orci mauris, tristique nec venenatis quis, varius sit amet metus. Phasellus pretium cursus ex, ac cursus purus. Praesent mauris leo, vulputate non pulvinar vitae, tristique a elit. Maecenas ut tempus justo. Donec commodo ex ac leo posuere pulvinar. Vivamus ullamcorper accumsan odio, at interdum felis lobortis quis. In hac habitasse platea dictumst. Maecenas convallis tellus sed elit dictum, eu consequat urna facilisis. Phasellus fringilla consectetur sem nec lacinia. Mauris gravida a sapien ut auctor." }
-        p { "Morbi nec volutpat erat. Integer at pellentesque nibh, vitae posuere justo. Quisque egestas ipsum erat, sed semper felis sollicitudin tincidunt. Integer id erat nec nibh convallis malesuada quis et quam. Proin bibendum ullamcorper nisl, ac molestie odio maximus vitae. Sed vel auctor augue. Vivamus sodales sem nisl, sit amet fringilla mi commodo et. Donec sem purus, porta ut fermentum in, iaculis vitae mauris. Pellentesque venenatis porttitor lacus id vehicula. Donec rhoncus convallis risus sed tempor. Sed suscipit odio ut arcu bibendum bibendum. Suspendisse sed tristique quam, eu pellentesque turpis." }
-        p { "Integer blandit lectus non laoreet viverra. Quisque nec velit eu erat accumsan laoreet. Mauris viverra molestie libero, at venenatis tellus dignissim quis. Pellentesque vulputate urna quis sem placerat, in viverra nibh lacinia. Vivamus velit quam, feugiat sed venenatis ut, interdum in leo. Ut viverra justo arcu, a interdum eros consequat vel. Integer a auctor mauris. Mauris hendrerit pellentesque arcu viverra accumsan. Integer nisi nunc, sollicitudin viverra sem quis, venenatis malesuada purus. Cras tempus dui eget urna auctor, eu euismod diam suscipit. Ut finibus turpis vitae lacus ultrices, et dignissim neque commodo. Maecenas convallis fringilla dictum." }
-        p { "In malesuada quam id feugiat tempus. Aliquam eget odio commodo nibh pellentesque ultrices. Nunc vitae velit ac ex vehicula vestibulum. Sed sodales, enim et ultrices volutpat, sem felis imperdiet tellus, quis congue eros elit eu nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris iaculis ex felis. Aenean nulla nisl, lacinia non arcu eu, tincidunt facilisis lacus." }
-        p { "Nulla facilisi. Quisque semper dictum finibus. In hendrerit eros eu ipsum cursus, eu elementum nunc interdum. In vestibulum leo augue, ac vehicula mi dictum et. Nullam ultrices in lacus vitae facilisis. Integer vel erat elit. Morbi nisi libero, consectetur ut ex sed, mollis tempor orci. Maecenas neque nisi, porta in diam ac, suscipit ultricies orci. Nulla eget felis a arcu lacinia semper id a est. Ut rutrum semper nibh ac tincidunt." }
-        p { "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie dolor id dui suscipit, at suscipit enim sodales. In vel est imperdiet, finibus elit in, pharetra tortor. Fusce mollis sapien vitae nisl sollicitudin, ac varius leo pulvinar. Duis orci mauris, tristique nec venenatis quis, varius sit amet metus. Phasellus pretium cursus ex, ac cursus purus. Praesent mauris leo, vulputate non pulvinar vitae, tristique a elit. Maecenas ut tempus justo. Donec commodo ex ac leo posuere pulvinar. Vivamus ullamcorper accumsan odio, at interdum felis lobortis quis. In hac habitasse platea dictumst. Maecenas convallis tellus sed elit dictum, eu consequat urna facilisis. Phasellus fringilla consectetur sem nec lacinia. Mauris gravida a sapien ut auctor." }
-        p { "Morbi nec volutpat erat. Integer at pellentesque nibh, vitae posuere justo. Quisque egestas ipsum erat, sed semper felis sollicitudin tincidunt. Integer id erat nec nibh convallis malesuada quis et quam. Proin bibendum ullamcorper nisl, ac molestie odio maximus vitae. Sed vel auctor augue. Vivamus sodales sem nisl, sit amet fringilla mi commodo et. Donec sem purus, porta ut fermentum in, iaculis vitae mauris. Pellentesque venenatis porttitor lacus id vehicula. Donec rhoncus convallis risus sed tempor. Sed suscipit odio ut arcu bibendum bibendum. Suspendisse sed tristique quam, eu pellentesque turpis." }
-        p { "Integer blandit lectus non laoreet viverra. Quisque nec velit eu erat accumsan laoreet. Mauris viverra molestie libero, at venenatis tellus dignissim quis. Pellentesque vulputate urna quis sem placerat, in viverra nibh lacinia. Vivamus velit quam, feugiat sed venenatis ut, interdum in leo. Ut viverra justo arcu, a interdum eros consequat vel. Integer a auctor mauris. Mauris hendrerit pellentesque arcu viverra accumsan. Integer nisi nunc, sollicitudin viverra sem quis, venenatis malesuada purus. Cras tempus dui eget urna auctor, eu euismod diam suscipit. Ut finibus turpis vitae lacus ultrices, et dignissim neque commodo. Maecenas convallis fringilla dictum." }
-        p { "In malesuada quam id feugiat tempus. Aliquam eget odio commodo nibh pellentesque ultrices. Nunc vitae velit ac ex vehicula vestibulum. Sed sodales, enim et ultrices volutpat, sem felis imperdiet tellus, quis congue eros elit eu nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris iaculis ex felis. Aenean nulla nisl, lacinia non arcu eu, tincidunt facilisis lacus." }
-        p { "Nulla facilisi. Quisque semper dictum finibus. In hendrerit eros eu ipsum cursus, eu elementum nunc interdum. In vestibulum leo augue, ac vehicula mi dictum et. Nullam ultrices in lacus vitae facilisis. Integer vel erat elit. Morbi nisi libero, consectetur ut ex sed, mollis tempor orci. Maecenas neque nisi, porta in diam ac, suscipit ultricies orci. Nulla eget felis a arcu lacinia semper id a est. Ut rutrum semper nibh ac tincidunt." }
+        p { "Hi! I'm Guido." }
+        p {
+          plain "I'm a "
+          a(href: "/recovering-javascript-developer") { "recovering JavaScript developer." }
+        }
+        p {
+          plain "I wrote this site in Rails, Phlex, Stimulus and open-props, and it's hosted at Hetzner."
+          br
+          a(href: "site-tack") { "Click here" }
+          plain " to learn more about it."
+        }
+        p {
+          plain "I've been coding for about 12 years now."
+          br
+          plain "Yes, I'm old."
+          br
+          plain "I even used jQuery."
+        }
+        p {
+          plain "I like cramming as many cool effects I can into this site."
+          br
+          plain "It's fun!"
+        }
+        p {
+          plain "Here's my socials:"
+          br
+          a(href: "https://x.com/gtarsia_dev") { "Link" }
+          br
+          plain "More like social, singular."
+        }
       }
     }
   end
