@@ -82,11 +82,9 @@ a:hover {
 @keyframes fat {
   from {
     text-shadow: none;
-    font-weight: 300;
   }
   to {
     text-shadow: 0 0 100px #ff00ff;
-    font-weight: 600;
   }
 }
 @keyframes shake {
@@ -101,4 +99,67 @@ main {
   margin: 0 auto;
   max-width: var(--size-md);
   padding-top: var(--size-8);
+}
+
+/* Navbar */
+.navbar {
+  padding-block: var(--size-3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface-1);
+  backdrop-filter: blur(12px);
+}
+
+.navbar-content {
+  max-width: var(--size-lg);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: var(--size-3);
+}
+
+.navbar-brand {
+  font-family: "Grenze Gotisch";
+  font-size: var(--font-size-fluid-2);
+  text-decoration: none;
+  background: linear-gradient(to right, var(--cyan-5), var(--purple-5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  filter: blur(0px) brightness(125%) hue-rotate(0deg);
+  display: inline-block;
+  padding: var(--size-2);
+}
+
+.navbar-brand:hover {
+  animation: rainbow 1s linear infinite,
+    fat 1s linear infinite alternate;
+}
+
+.navbar-links {
+  display: flex;
+  gap: var(--size-5);
+}
+
+.navbar-links a {
+  font-family: "Space Grotesk";
+  font-size: var(--font-size-2);
+  padding: var(--size-2);
+  background: linear-gradient(to right, var(--cyan-5), var(--purple-5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  filter: blur(0px) brightness(125%) hue-rotate(0deg);
+  display: inline-block;
+}
+
+.navbar-links a:hover {
+  animation: rainbow 1s linear infinite,
+    fat 1s linear infinite alternate,
+    shake 10s ease-in-out infinite;
+  text-decoration: none;
 }
