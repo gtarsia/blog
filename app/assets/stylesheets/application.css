@@ -52,29 +52,37 @@ h1, h2, h3, h4, h5 {
 }
 
 a {
-  background: linear-gradient(to right, red, green);
+  background: linear-gradient(to right, var(--cyan-5), var(--purple-5));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   /* For Firefox */
   background-clip: text;
   color: transparent;
+  filter: blur(0px) brightness(125%) hue-rotate(0deg);
 }
 
-/*a {*/
 a:hover {
-  animation: fade-in 1s linear infinite alternate;
+  animation: rainbow 1s linear infinite, fat 1s linear infinite alternate;
   text-decoration: none;
 }
 
-@keyframes fade-in {
+@keyframes rainbow {
   0% {
-    font-weight: 300;
+    filter: blur(.0px) brightness(125%) hue-rotate(0deg);
   }
   100% {
+    filter: blur(.2px) brightness(125%) hue-rotate(-360deg);
+  }
+}
+
+@keyframes fat {
+  from {
+    text-shadow: none;
+    font-weight: 300;
+  }
+  to {
+    text-shadow: 0 0 100px #ff00ff;
     font-weight: 600;
-    /*text-shadow: 0 0 8px #ff00ff54;*/
-    filter: blur(.2px) brightness(125%) hue-rotate(360deg);
   }
 }
 
