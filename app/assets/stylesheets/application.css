@@ -10,171 +10,76 @@
  */
 
 @import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+/* the following switch imports have selectors that enable the override of the system setting */
+@import "https://unpkg.com/open-props/theme.light.switch.min.css";
+@import "https://unpkg.com/open-props/theme.dark.switch.min.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Grenze+Gotisch:wght@100..900&display=swap');
 
 /* Base styles */
 html {
-  font-family: var(--font-sans);
-  color: var(--gray-9);
-  /*background: var(--sand-1);*/
-  animation: gradient 1s linear infinite;
+  /*font-family: var(--font-neo-grotesque);*/
+  /*font-family: var(--font-rounded-sans);*/
+  font-display: optional;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
+p {
+  font-family: "Space Grotesk";
+  word-spacing: 3px;
+  letter-spacing: .0em;
+  font-size: var(--font-size-fluid-1);
+  margin-bottom: var(--size-7);
+  line-height: var(--font-lineheight-2);
+  font-weight: var(--font-weight-3);
+
+  /*font-family: Syne;*/
+  /*word-spacing: 3px;*/
+  /*letter-spacing: .025em;*/
+  /*font-size: var(--font-size-fluid-1);*/
+  /*margin-bottom: var(--size-6);*/
+  /*line-height: var(--font-lineheight-2);*/
+  /*font-weight: var(--font-weight-2);*/
 }
 
-/* Heading styles */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-sans);
-  color: var(--gray-9);
-  width: fit-content;
-  margin: 0 auto;
-  text-decoration: underline;
+h1, h2, h3, h4, h5 {
+  font-family: "Cormorant Garamond";
+  max-inline-size: initial;
+  font-size: var(--font-size-fluid-3);
+  margin-bottom: var(--size-8);
+  font-weight: var(--font-weight-3);
 }
 
 a {
+  background: linear-gradient(to right, red, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* For Firefox */
+  background-clip: text;
+  color: transparent;
 }
 
+/*a {*/
 a:hover {
-  background: linear-gradient(90deg, blue 80%, transparent 80%);
-  background-repeat: repeat-x;
-  background-size: 12px 2px;
-  animation: border-dance 4s infinite linear;
+  animation: fade-in 1s linear infinite alternate;
   text-decoration: none;
 }
 
-@keyframes border-dance {
+@keyframes fade-in {
   0% {
-    background-position: 0px 25px;
+    font-weight: 300;
   }
   100% {
-    background-position: 24px 25px;
+    font-weight: 600;
+    /*text-shadow: 0 0 8px #ff00ff54;*/
+    filter: blur(.2px) brightness(125%) hue-rotate(360deg);
   }
-}
-
-h1 { font-size: var(--font-size-8); margin-bottom: var(--size-8); }
-h2 { font-size: var(--font-size-6); }
-h3 { font-size: var(--font-size-5); }
-
-/* Text styles */
-p {
-  font-size: var(--font-size-4);
-  line-height: var(--font-lineheight-3);
-  margin: 0 auto;
-  margin-bottom: var(--size-5);
-  max-width: var(--size-md);
 }
 
 main {
+  margin: 0 auto;
+  max-width: var(--size-md);
   padding-top: var(--size-8);
-  margin: 0 auto;
-}
-
-/* Navbar */
-.navbar {
-  padding-block: var(--size-3);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: transparent;
-}
-
-.navbar::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, var(--cyan-0), var(--blue-0));
-  opacity: 0.95;
-  backdrop-filter: blur(8px);
-  z-index: -1;
-}
-
-.navbar-content {
-  max-width: var(--size-lg);
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: var(--size-3);
-}
-
-.navbar-brand {
-  font-size: var(--font-size-4);
-  font-weight: var(--font-weight-7);
-  color: var(--blue-7);
-  padding: var(--size-2);
-  transition: color 0.3s var(--ease-3);
-}
-
-.navbar-brand:hover {
-  color: var(--blue-8);
-}
-
-.navbar-brand::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: var(--blue-5);
-  transform: scaleX(0);
-  transition: transform 0.3s var(--ease-spring-3);
-}
-
-.navbar-brand:hover::after {
-  transform: scaleX(1);
-}
-
-.navbar-links {
-  display: flex;
-  gap: var(--size-5);
-}
-
-.navbar-links a {
-  background: 0;
-  color: var(--blue-7);
-  text-decoration: none;
-  font-weight: var(--font-weight-5);
-  padding: var(--size-2);
-  position: relative;
-  transition: all 0.2s var(--ease-3);
-}
-
-/*.navbar-links a::before {*/
-/*  content: '';*/
-/*  position: absolute;*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*  background: var(--blue-2);*/
-/*  border-radius: var(--radius-2);*/
-/*  z-index: -1;*/
-/*  scale: 0.7 0.9;*/
-/*  opacity: 0;*/
-/*  transition: all 0.2s var(--ease-3);*/
-/*}*/
-
-/*.navbar-links a:hover {*/
-/*  color: var(--blue-9);*/
-/*  transform: translateY(-1px);*/
-/*}*/
-
-.navbar-links a:hover::before {
-  scale: 1 1;
-  opacity: 1;
-}
-
-/* Utility classes */
-.flex {
-  display: flex;
-}
-
-/* Your existing MatrixFont definition */
-@font-face {
-  font-family: "MatrixFont";
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("matrix.ttf") format("truetype");
 }

@@ -25,7 +25,7 @@ class Views::Home::Index < Views::Base
           plain "I even used jQuery."
         }
         p {
-          plain "I like cramming as many cool effects I can into this site."
+          plain "I like cramming as many CSS effects as I can into this site."
           br
           plain "It's fun!"
         }

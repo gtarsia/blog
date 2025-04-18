@@ -20,6 +20,9 @@ class Components::Layouts::Main < Components::Base
         link(rel: "icon", href: "/icon.png", type: "image/png")
         link(rel: "icon", href: "/icon.svg", type: "image/svg+xml")
         link(rel: "apple-touch-icon", href: "/icon.png")
+        link(rel: "preload", href: "https://fonts.googleapis.com")
+        link(rel: "preload", href: "https://fonts.gstatic.com", crossorigin: true)
+        link(href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap", rel: "stylesheet")
         # Includes all stylesheet files in app/assets/stylesheets
         stylesheet_link_tag :app, "data-turbo-track": "reload"
         javascript_importmap_tags
