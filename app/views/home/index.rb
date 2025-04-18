@@ -8,7 +8,8 @@ class Views::Home::Index < Views::Base
         p { "Hi! I'm Guido." }
         p {
           plain "I'm a "
-          a(href: "/recovering-javascript-developer") { "recovering JavaScript developer." }
+          a(href: "/recovering-javascript-developer") { "recovering JavaScript developer" }
+          plain "."
         }
         p {
           plain "I wrote this site in Rails, Phlex, Stimulus and open-props, and it's hosted at Hetzner."
