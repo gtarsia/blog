@@ -169,12 +169,3 @@ main {
 .flex {
   display: flex;
 }
-
-/* Your existing MatrixFont definition */
-@font-face {
-  font-family: "MatrixFont";
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("matrix.ttf") format("truetype");
-}
