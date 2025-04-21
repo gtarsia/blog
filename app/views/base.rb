@@ -9,5 +9,7 @@ class Views::Base < Components::Base
     end
   end
 
+  def title = "gtarsia.dev"
+
   def layout = Components::Layouts::Main
 end

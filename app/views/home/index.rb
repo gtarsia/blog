@@ -8,7 +8,7 @@ class Views::Home::Index < Views::Base
         p { "Hi! I'm Guido." }
         p {
           plain "I'm a "
-          a(href: "/recovering-javascript-developer") { "recovering JavaScript developer" }
+          a(href: posts_im_a_recovering_java_script_developer_path) { "recovering JavaScript developer" }
           plain "."
         }
         p {

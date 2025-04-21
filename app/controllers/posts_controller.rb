@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
-  def show
-    post = Post.find(params[:id])
-    render Views::Post.new(post)
+  layout false
+  Post.all.each do |post|
+    define_method post.id do
+      render post.view
+    end
   end
 end

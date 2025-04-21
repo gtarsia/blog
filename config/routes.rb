@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
   Post.all.each do |post|
-    get "posts/:id", to: "posts#show", as: "posts_digital_rain"
+    get "posts/#{post.id}", to: "posts##{post.id}"
   end
 end

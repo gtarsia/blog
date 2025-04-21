@@ -4,12 +4,15 @@ class Post < Literal::Object
   prop :date, String, reader: :public
   prop :author, String, reader: :public
 
-  def self.all
-    [ digital_rain ]
+  def view
+    "views/posts/#{id}".classify.constantize.new
   end
 
-  def self.routes
-    get "posts/digital_rain" => "posts/digital_rain#show", as: :digital_rain
+  def self.all
+    [
+      im_a_recovering_java_script_developer,
+      digital_rain
+    ]
   end
 
   def self.find(id)
@@ -20,6 +23,13 @@ class Post < Literal::Object
     id: "digital_rain",
     title: "Digital Rain",
     date: "2025-10-21",
+    author: "Guido Tarsia"
+  )
+
+  def self.im_a_recovering_java_script_developer = Post.new(
+    id: "im_a_recovering_java_script_developer",
+    title: "I'm a recovering java_script developer",
+    date: "2025-04-21",
     author: "Guido Tarsia"
   )
 end

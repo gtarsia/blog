@@ -1,6 +1,4 @@
-class Components::Posts::DigitalRain < Views::Base
-  def title = "gtarsia.dev"
-
+class Views::Posts::DigitalRain < Views::Base
   def columns = 75
   def rows = 25
 
