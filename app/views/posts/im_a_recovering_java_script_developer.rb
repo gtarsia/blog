@@ -1,8 +1,7 @@
-class Views::Posts::ImARecoveringJavaScriptDeveloper < Views::Base
+class Views::Posts::ImARecoveringJavaScriptDeveloper < Views::Post
   def view_template
-    article {
-      h1 { "I'm a recovering JavaScript developer" }
-      p { "Write some stuff here." }
-    }
+    p { "I've done JavaScript for most of my career, and I'm glad that stage is over. " }
+    p { "I don't intend to not write any JavaScript at all." }
+    p { "I just don't enjoy writing apps where JS is the primary language." }
   end
 end

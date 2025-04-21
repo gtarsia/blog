@@ -5,7 +5,7 @@ class Post < Literal::Object
   prop :author, String, reader: :public
 
   def view
-    "views/posts/#{id}".classify.constantize.new
+    "views/posts/#{id}".classify.constantize.new(self)
   end
 
   def self.all
@@ -28,7 +28,7 @@ class Post < Literal::Object
 
   def self.im_a_recovering_java_script_developer = Post.new(
     id: "im_a_recovering_java_script_developer",
-    title: "I'm a recovering java_script developer",
+    title: "I'm a recovering JavaScript developer",
     date: "2025-04-21",
     author: "Guido Tarsia"
   )

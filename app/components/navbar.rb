@@ -3,14 +3,10 @@
 class Components::Navbar < Components::Base
   include Phlex::Rails::Helpers::LinkTo
 
-  def initialize(brand: "Your Blog")
-    @brand = brand
-  end
-
   def view_template
     nav(class: "navbar") do
       div(class: "navbar-content") do
-        link_to("/", class: "navbar-brand") { @brand }
+        link_to("/", class: "navbar-brand") { "gtarsia.dev" }
         navigation_links
       end
     end

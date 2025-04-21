@@ -28,7 +28,7 @@ class Components::Layouts::Main < Components::Base
         javascript_importmap_tags
       end
       body do
-        render Components::Navbar.new(brand: @title)
+        render Components::Navbar.new
         main do
           div(class: "container") do
             plain yield

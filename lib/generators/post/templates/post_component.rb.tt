@@ -1,8 +1,5 @@
 class Views::Posts::<%= post.id.camelize %> < Views::Base
   def view_template
-    article {
-      h1 { "<%= post.title %>" }
-      p { "Write some stuff here." }
-    }
+    p { "Write some stuff here." }
   end
 end
