@@ -24,6 +24,7 @@ html {
   /*font-family: var(--font-neo-grotesque);*/
   /*font-family: var(--font-rounded-sans);*/
   font-display: optional;
+  overflow-y: scroll;
 }
 
 p, ul {
@@ -44,8 +45,11 @@ p, ul {
   /*font-weight: var(--font-weight-2);*/
 }
 
-h1, h2, h3, h4, h5 {
+.title, h1, h2, h3 {
   font-family: "Grenze Gotisch";
+}
+
+h1, h2, h3 {
   max-inline-size: initial;
   font-size: var(--font-size-fluid-3);
   margin-bottom: var(--size-8);

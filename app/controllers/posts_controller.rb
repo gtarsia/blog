@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   layout false
   def index
+    render Views::Posts::Index.new
   end
 
   Post.all.each do |post|
