@@ -12,17 +12,25 @@ class Views::Home::Index < Views::Base
           plain "."
         }
         p {
-          plain "I like cramming as many CSS effects as I can into this site."
-          br
-          plain "As you can see."
+          plain "My plan with this site is to cram as many CSS effects as I can into it."
           br
           plain "It's fun!"
         }
         p {
-          plain "I wrote this site in Rails, Phlex, Stimulus and open-props, and it's hosted at Hetzner."
-          br
-          a(href: "site-tack") { "Click here" }
-          plain " to learn more about it."
+          plain "Here's a couple details about the stack used:"
+          ul {
+            li { "Web Framework: Ruby on Rails" }
+            li { "Client Framework: Stimulus" }
+            li { "Views: Phlex" }
+            li { "CSS: open-props" }
+            li { "Hosting: Hetzner" }
+            li { "DNS: CloudFlare" }
+          }
+        }
+        p {
+          plain "I talk a bit more about "
+          a(href: "site-tack") { "the stack here" }
+          plain "."
         }
         p {
           plain "I've been coding for about 12 years now."
