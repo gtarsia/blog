@@ -53,12 +53,12 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-  font-size: clamp(1.75rem, 7.5vw, 3rem);
+  font-size: var(--font-size-fluid-2);
   margin-bottom: var(--size-6);
 }
 
 h3 {
-  font-size: var(--font-size-fluid-2);
+  font-size: clamp(1.25rem, 5vw, 2rem);
   margin-bottom: var(--size-4);
 }
 
