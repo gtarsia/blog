@@ -30,9 +30,7 @@ class Components::Layouts::Main < Components::Base
       body do
         render Components::Navbar.new
         main do
-          div(class: "container") do
-            plain yield
-          end
+          plain yield
         end
       end
     end

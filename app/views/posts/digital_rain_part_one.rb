@@ -1,8 +1,22 @@
-class Views::Posts::DigitalRain < Views::Base
+class Views::Posts::DigitalRainPartOne < Views::Post
   def columns = 75
   def rows = 25
 
   def view_template
+    p { "I made this Digital Rain via CSS. " }
+    p { "It's not very performant since it does repaints for each letter." }
+    p {
+      plain "It's not too pretty or faithful to the "
+      a(href: "https://youtu.be/MvEXkd3O2ow?t=21") { "original" }
+      plain "."
+    }
+
+    p {
+      plain "And I plan to redo it with "
+      code { "<canvas>" }
+      plain " since it's more powerful."
+    }
+    p { "So I'd rather just release this and not waste any more time with it. " }
     div(id: "rain", data: { controller: "rain", "rain-rows-value": rows, "rain-columns-value": columns }) do
       rows.times do |column|
         div do
@@ -26,9 +40,9 @@ class Views::Posts::DigitalRain < Views::Base
       text-align: center;
       color: #{bg_green};
       background-color: #{bg_green};
-      margin: 0rem 10rem;
       filter: blur(.2px);
       font-size: 1.25rem;
+      line-height: 1.2rem;
     }
     .trigger {
       animation: block 4s 1 linear forwards;

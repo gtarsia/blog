@@ -11,7 +11,7 @@ class Post < Literal::Object
   def self.all
     [
       im_a_recovering_java_script_developer,
-      digital_rain
+      digital_rain_part_one
     ]
   end
 
@@ -19,9 +19,9 @@ class Post < Literal::Object
     all.find { |post| post.id == id }
   end
 
-  def self.digital_rain = Post.new(
-    id: "digital_rain",
-    title: "Digital Rain",
+  def self.digital_rain_part_one = Post.new(
+    id: "digital_rain_part_one",
+    title: "Digital Rain: Part One",
     date: "2025-10-21",
     author: "Guido Tarsia"
   )

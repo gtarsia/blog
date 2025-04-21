@@ -108,7 +108,7 @@ a:hover {
 main {
   margin: 0 auto;
   max-width: var(--size-md);
-  padding-top: var(--size-8);
+  padding: var(--size-8) 0;
 }
 
 /* Navbar */
