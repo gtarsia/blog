@@ -27,11 +27,11 @@ class Views::Home::Index < Views::Base
             li { "DNS: CloudFlare" }
           }
         }
-        p {
-          plain "I talk a bit more about "
-          a(href: "site-tack") { "the stack here" }
-          plain "."
-        }
+        # p {
+        #   plain "I talk a bit more about "
+        #   a(href: "site-tack") { "the stack here" }
+        #   plain "."
+        # }
         p {
           plain "I've been coding for about 12 years now."
           br
