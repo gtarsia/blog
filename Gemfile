@@ -65,3 +65,5 @@ end
 gem "phlex-rails", "~> 2.2"
 
 gem "literal", "~> 1.6"
+
+gem "sitemap_generator", "~> 6.3"

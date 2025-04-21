@@ -1,4 +1,4 @@
-class Views::Rain::Index < Views::Base
+class Components::Posts::DigitalRain < Views::Base
   def title = "gtarsia.dev"
 
   def columns = 75

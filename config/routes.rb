@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "home/index"
+  get "about", to: "about#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -12,5 +13,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
-  get "rain", to: "rain#index"
+  Post.all.each do |post|
+    get "posts/:id", to: "posts#show", as: "posts_digital_rain"
+  end
 end
